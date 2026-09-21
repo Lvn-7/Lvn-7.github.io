@@ -611,7 +611,7 @@ button { font: inherit; }
 }
 .experience-section .timeline-row {
   position: relative;
-  grid-template-columns: 190px 1fr 70px;
+  grid-template-columns: 72px 190px 1fr 70px;
   gap: 54px;
   min-height: 220px;
   margin: 22px 0 22px 48px;
@@ -621,6 +621,9 @@ button { font: inherit; }
   background: rgba(255,249,231,.44);
   box-shadow: 0 10px 24px rgba(96,72,35,.09), inset 0 1px 0 rgba(255,255,255,.42);
 }
+.experience-logo { display: grid; place-items: center; width: 88px; height: 88px; align-self: center; }
+.experience-logo img { display: block; width: 100%; height: 100%; object-fit: contain; }
+.experience-logo img[src*="china-southern"] { width: 142px; height: auto; }
 .experience-section .timeline-row::before {
   content: "";
   position: absolute;
@@ -662,6 +665,9 @@ button { font: inherit; }
 @media (max-width: 960px) {
   .experience-section .timeline::before { left: 18px; }
   .experience-section .timeline-row { grid-template-columns: 1fr; gap: 15px; margin-left: 48px; padding: 30px 26px; }
+  .experience-section .experience-logo { width: 78px; height: 78px; align-self: center; }
+  .experience-section .timeline-row > span:last-child { display: none; }
+  .experience-section .timeline-row > .experience-logo { display: grid; }
   .experience-section .timeline-row::before { top: 43px; left: -30px; }
   .experience-section .timeline-row > span { text-align: left; }
 }
