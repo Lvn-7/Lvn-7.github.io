@@ -108,9 +108,9 @@
             <h3>Piper X 机械臂模仿学习全流程系统构建与 ACT 真机部署</h3>
             <p class="project-role">项目负责人 · 独立完成</p>
             <ul class="project-detail-list">
-              <li>搭建 Piper X <strong>主从遥操作系统</strong>与<strong>多视角数据采集系统</strong>，设计<strong>自定义数据规范</strong>并完成向<strong>标准 LeRobotDataset 的转换</strong>与训练接口适配，形成<strong>稳定的真实机器人示教数据采集链路</strong>。</li>
-              <li>基于 <strong>LeRobot ACT</strong> 在 <strong>NVIDIA H100 单卡</strong>完成策略训练，并搭建服务器<strong>远程推理架构</strong>：机器人端通过 Wi-Fi 实时上传图像与 State，服务器返回 Action Chunk 驱动真机执行，完成<strong>从数采、训练到部署控制的完整闭环</strong>。</li>
-              <li>在<strong>接近训练初始分布的旋钮操作场景</strong>中，真机任务<strong>成功率约 70%</strong>；进一步分析发现，分布外泛化能力主要受<strong>示教数据初始状态覆盖度与数据多样性</strong>限制。</li>
+              <li>搭建 Piper X <strong>主从遥操作系统与双视角数据采集系统</strong>，设计<strong>自定义数据规范</strong>并完成向<strong>标准 LeRobotDataset 的转换</strong>与本体配置调整、训练接口适配，形成<strong>稳定的真实机器人示教数据采集完整链路</strong>。<em>项目已部分开源，涉及系统内保密。</em></li>
+              <li>基于 <strong>LeRobot ACT</strong> 在 <strong>NVIDIA H100 单卡</strong>完成策略训练，并搭建服务器<strong>远程推理架构</strong>：机器人端通过 Wi-Fi 实时上传图像与 State，服务器返回 Action Chunk 驱动真机执行，完成<strong>独立地从数采、训练到部署控制的完整闭环</strong>。</li>
+              <li><strong>自行设计算法进行模型产出的后处理以及控制层算法再优化</strong>，最终在<strong>接近训练初始分布的旋钮操作场景</strong>中，<strong>真机任务成功率约 90%</strong>（已附 DEMO）；进一步分析发现，策略在<strong>分布外初始状态下的泛化能力主要受示教数据初始覆盖度限制</strong>。</li>
             </ul>
             <div class="project-tags"><span>LeRobot</span><span>ACT</span><span>H100</span><span>Real-world Deployment</span></div>
           </div>
@@ -126,8 +126,9 @@
             <h3>Piper X 机械臂 PI0.5 VLA 微调与本体适配</h3>
             <p class="project-role">项目负责人 · 独立完成</p>
             <ul class="project-detail-list">
-              <li>基于自采 Piper X 真实机器人示教数据，<strong>完成 LeRobot 数据向 OpenPI / PI0.5 训练格式的适配</strong>，设计<strong>机器人 Observation / Action 映射与本体配置</strong>，打通自定义机械臂数据<strong>接入预训练 VLA 的训练链路</strong>。</li>
-              <li>基于官方 pi0.5_base 权重在 <strong>NVIDIA H100 单卡</strong>完成 Piper X 操作任务微调，<strong>获得策略 checkpoint</strong> 并完成离线推理验证，为后续真机闭环部署提供模型基础。</li>
+              <li>面向 Piper X <strong>本体适配</strong>，完成 LeRobot 数据向 OpenPI / PI0.5 格式转换，<strong>设计 Observation / Action 映射、状态维度与动作空间配置</strong>，打通自定义机械臂接入预训练 VLA 的训练链路。</li>
+              <li>基于官方 pi0.5_base 在 <strong>NVIDIA H100 单卡</strong>完成微调训练，采用<strong>视觉编码器全量训练 + PaliGemma / Action Expert LoRA 的混合微调</strong>与<strong>ViT / PaliGemma / Action Expert 全 LoRA 轻量微调</strong>两种训练方案开展训练。</li>
+              <li>面向真机部署完成 Action Chunk <strong>后处理及关节状态约束等控制优化</strong>，在当前小规模数据集下<strong>任务成功率约 50%</strong>；但泛化性依旧较弱，主要瓶颈为<strong>示教数据量及初始状态覆盖不足</strong>，相关真机测试<strong>DEMO 已展示于个人主页</strong>。</li>
             </ul>
             <div class="project-tags"><span>OpenPI</span><span>VLA</span><span>Fine-tuning</span></div>
           </div>

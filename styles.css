@@ -790,6 +790,15 @@ button { font: inherit; }
 .project-humanoid::before { display: none; }
 .project.project-humanoid { background: #f2ead8; }
 .project.project-teleop { background: #f2ead8; }
+.project-visual.dark-visual,
+.project-visual.pi-visual { margin: 0; border-radius: 0; background: #f2ead8; }
+.project-visual.dark-visual::before,
+.project-visual.dark-visual .flow,
+.project-visual.pi-visual .pi-orbit { display: none; }
+.project-content,
+.project-reading-layer { align-self: center; justify-content: center; }
+.project-content .project-detail-list,
+.project-reading-layer .project-detail-list { margin-right: auto; margin-left: auto; }
 .project-reading-layer {
   position: relative;
   z-index: 1;
