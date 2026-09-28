@@ -802,7 +802,13 @@ button { font: inherit; }
 .project-hero.unified-project,
 .project-split.unified-project:not(.project-teleop) { grid-template-columns: 1fr; min-height: 680px; background: #f2ead8; }
 .project-hero.unified-project .project-content,
-.project-split.unified-project:not(.project-teleop) .project-content { width: min(100%, 1000px); min-height: 680px; margin-inline: auto; }
+.project-split.unified-project:not(.project-teleop) .project-content { width: 100%; max-width: none; min-height: 680px; margin-inline: auto; align-items: center; }
+.project-hero.unified-project .project-detail-list,
+.project-split.unified-project:not(.project-teleop) .project-detail-list { width: min(100%, 900px); }
+.project-hero.unified-project .project-meta,
+.project-split.unified-project:not(.project-teleop) .project-meta,
+.project-hero.unified-project h3,
+.project-split.unified-project:not(.project-teleop) h3 { width: min(100%, 1000px); }
 .project-hero.unified-project .project-visual,
 .project-split.unified-project:not(.project-teleop) .project-visual { display: none; }
 .project-reading-layer {
