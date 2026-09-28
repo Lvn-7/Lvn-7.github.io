@@ -104,35 +104,24 @@
       <section class="content-section page-shell observed-section" id="projects" data-nav="projects">
         <article class="project project-hero unified-project reveal">
           <div class="project-content">
-            <div class="project-meta"><span>IMITATION LEARNING</span><span>PROJECT 01</span></div>
             <h3>Piper X 机械臂模仿学习全流程系统构建与 ACT 真机部署</h3>
-            <p class="project-role">项目负责人 · 独立完成</p>
             <ul class="project-detail-list">
               <li>搭建 Piper X <strong>主从遥操作系统与双视角数据采集系统</strong>，设计<strong>自定义数据规范</strong>并完成向<strong>标准 LeRobotDataset 的转换</strong>与本体配置调整、训练接口适配，形成<strong>稳定的真实机器人示教数据采集完整链路</strong>。<em>项目已部分开源，涉及系统内保密。</em></li>
               <li>基于 <strong>LeRobot ACT</strong> 在 <strong>NVIDIA H100 单卡</strong>完成策略训练，并搭建服务器<strong>远程推理架构</strong>：机器人端通过 Wi-Fi 实时上传图像与 State，服务器返回 Action Chunk 驱动真机执行，完成<strong>独立地从数采、训练到部署控制的完整闭环</strong>。</li>
               <li><strong>自行设计算法进行模型产出的后处理以及控制层算法再优化</strong>，最终在<strong>接近训练初始分布的旋钮操作场景</strong>中，<strong>真机任务成功率约 90%</strong>（已附 DEMO）；进一步分析发现，策略在<strong>分布外初始状态下的泛化能力主要受示教数据初始覆盖度限制</strong>。</li>
             </ul>
-            <div class="project-tags"><span>LeRobot</span><span>ACT</span><span>H100</span><span>Real-world Deployment</span></div>
-          </div>
-          <div class="project-visual dark-visual" aria-label="Piper X 项目媒体预留位置">
-            <div class="flow"><span>TELEOP</span><i></i><span>DATA</span><i></i><span>TRAIN</span><i></i><span>ROBOT</span></div>
-            <p>DEMO MEDIA · COMING SOON</p>
           </div>
         </article>
 
         <article class="project project-split unified-project reveal">
           <div class="project-content">
-            <div class="project-meta"><span>VISION-LANGUAGE-ACTION</span><span>PROJECT 02</span></div>
             <h3>Piper X 机械臂 PI0.5 VLA 微调与本体适配</h3>
-            <p class="project-role">项目负责人 · 独立完成</p>
             <ul class="project-detail-list">
               <li>面向 Piper X <strong>本体适配</strong>，完成 LeRobot 数据向 OpenPI / PI0.5 格式转换，<strong>设计 Observation / Action 映射、状态维度与动作空间配置</strong>，打通自定义机械臂接入预训练 VLA 的训练链路。</li>
               <li>基于官方 pi0.5_base 在 <strong>NVIDIA H100 单卡</strong>完成微调训练，采用<strong>视觉编码器全量训练 + PaliGemma / Action Expert LoRA 的混合微调</strong>与<strong>ViT / PaliGemma / Action Expert 全 LoRA 轻量微调</strong>两种训练方案开展训练。</li>
               <li>面向真机部署完成 Action Chunk <strong>后处理及关节状态约束等控制优化</strong>，在当前小规模数据集下<strong>任务成功率约 50%</strong>；但泛化性依旧较弱，主要瓶颈为<strong>示教数据量及初始状态覆盖不足</strong>，相关真机测试<strong>DEMO 已展示于个人主页</strong>。</li>
             </ul>
-            <div class="project-tags"><span>OpenPI</span><span>VLA</span><span>Fine-tuning</span></div>
           </div>
-          <div class="project-visual pi-visual" aria-hidden="true"><div class="pi-orbit"><span>π<sub>0.5</sub></span></div></div>
         </article>
 
         <article class="project project-split reverse project-teleop reveal">
@@ -148,15 +137,12 @@
 
         <article class="project project-detail-wide unified-project project-humanoid reveal">
           <div class="project-reading-layer">
-            <div class="project-meta"><span>HUMANOID · IN PROGRESS</span><span>PROJECT 04</span></div>
             <h3>面向 GR00T N1.7 / SONIC 的 G1 全身遥操作与数据采集</h3>
-            <p class="project-role">项目负责人</p>
             <ul class="project-detail-list">
               <li>面向 <strong>Unitree G1</strong> 人形机器人全身操作学习，搭建基于 <strong>Pico、灵巧手与相机</strong>的<strong>遥操作及数据采集系统</strong>，实现机器人<strong>全身与灵巧手协同遥操作</strong>。</li>
               <li>打通<strong>全身遥操作与多模态数据采集</strong>链路，完成相机、手部及机器人状态等数据的<strong>统一记录</strong>，目前已进入任务示教数据采集阶段。</li>
               <li><strong>计划</strong>基于采集数据开展 <strong>SONIC / GR00T N1.7 模型适配与微调</strong>，并进一步验证人形机器人全身操作任务的真机部署效果。</li>
             </ul>
-            <span class="live-status"><i></i> COLLECTING DATA</span>
           </div>
         </article>
       </section>
