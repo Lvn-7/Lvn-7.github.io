@@ -788,6 +788,8 @@ button { font: inherit; }
   padding: 0;
 }
 .project-humanoid::before { display: none; }
+.project.project-humanoid { background: #f2ead8; }
+.project.project-teleop { background: #f2ead8; }
 .project-reading-layer {
   position: relative;
   z-index: 1;
