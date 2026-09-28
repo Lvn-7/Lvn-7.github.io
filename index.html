@@ -30,7 +30,19 @@
     </header>
 
     <main id="main">
-      <section class="hero page-shell observed-section" id="home" data-nav="home">
+      <section class="video-home observed-section" id="home" data-nav="home" aria-label="DEMO 视频首页">
+        <video class="video-home-media" autoplay muted loop playsinline preload="auto">
+          <source src="DEMO.mp4" type="video/mp4" />
+          您的浏览器不支持 HTML5 视频。
+        </video>
+        <div class="video-home-overlay"></div>
+        <div class="video-home-content">
+          <p>EMBODIED AI · ROBOTICS</p>
+          <a class="video-home-enter" href="#profile">进入主页 <span aria-hidden="true">↓</span></a>
+        </div>
+      </section>
+
+      <section class="hero page-shell" id="profile">
         <div class="hero-glow glow-blue"></div><div class="hero-glow glow-violet"></div>
         <div class="hero-copy reveal">
           <div class="identity">
