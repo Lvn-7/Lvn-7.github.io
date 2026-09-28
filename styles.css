@@ -809,6 +809,12 @@ button { font: inherit; }
 .project-split.unified-project:not(.project-teleop) .project-meta,
 .project-hero.unified-project h3,
 .project-split.unified-project:not(.project-teleop) h3 { width: min(100%, 1000px); }
+.project-split.project-teleop { grid-template-columns: 1fr; min-height: 680px; }
+.project-split.project-teleop .project-content { width: 100%; max-width: none; min-height: 680px; margin-inline: auto; align-items: center; }
+.project-split.project-teleop h3,
+.project-split.project-teleop .project-detail-list { width: min(100%, 900px); }
+.project-humanoid .project-reading-layer { width: 100%; max-width: none; min-height: 780px; margin-inline: auto; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+.project-humanoid .project-reading-layer > * { width: min(100%, 900px); }
 .project-hero.unified-project .project-visual,
 .project-split.unified-project:not(.project-teleop) .project-visual { display: none; }
 .project-reading-layer {
