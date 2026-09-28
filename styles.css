@@ -799,6 +799,12 @@ button { font: inherit; }
 .project-reading-layer { align-self: center; justify-content: center; }
 .project-content .project-detail-list,
 .project-reading-layer .project-detail-list { margin-right: auto; margin-left: auto; }
+.project-hero.unified-project,
+.project-split.unified-project:not(.project-teleop) { grid-template-columns: 1fr; min-height: 680px; background: #f2ead8; }
+.project-hero.unified-project .project-content,
+.project-split.unified-project:not(.project-teleop) .project-content { width: min(100%, 1000px); min-height: 680px; margin-inline: auto; }
+.project-hero.unified-project .project-visual,
+.project-split.unified-project:not(.project-teleop) .project-visual { display: none; }
 .project-reading-layer {
   position: relative;
   z-index: 1;
