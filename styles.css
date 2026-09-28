@@ -785,6 +785,7 @@ button { font: inherit; }
 
 /* Projects: title and copy only, centered within each viewport. */
 #projects .project {
+  position: relative;
   display: flex;
   width: 100vw;
   min-height: 100svh;
@@ -795,20 +796,29 @@ button { font: inherit; }
   overflow: visible;
   border: 0;
   border-radius: 0;
-  background: transparent;
+  background: #f2ead8;
   box-shadow: none;
   transform: none;
 }
 
 #projects .project:hover { box-shadow: none; transform: none; }
-#projects .project::before,
 #projects .project::after,
 #projects .project-content::before,
 #projects .project-reading-layer::before { display: none; }
 
+#projects .project::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  display: block;
+  pointer-events: none;
+  background: linear-gradient(115deg, rgba(255,252,240,.5), transparent 48%, rgba(150,118,68,.045));
+}
+
 #projects .project-content,
 #projects .project-reading-layer {
   position: relative;
+  z-index: 1;
   display: flex;
   width: min(900px, calc(100% - 64px));
   min-height: 0;
@@ -827,8 +837,8 @@ button { font: inherit; }
   margin: 0;
   color: #111;
   font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(30px, 3vw, 44px);
-  line-height: 1.18;
+  font-size: clamp(20px, 2vw, 24px);
+  line-height: 1.4;
   text-align: center;
   text-shadow: none;
 }
@@ -856,7 +866,7 @@ button { font: inherit; }
     padding: 88px 0 56px;
   }
   #projects .project h3,
-  #projects .project-reading-layer h3 { font-size: 28px; }
+  #projects .project-reading-layer h3 { font-size: 18px; }
   #projects .project-detail-list li,
   #projects .project-reading-layer .project-detail-list li { font-size: 12.5px; }
 }
