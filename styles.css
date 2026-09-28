@@ -783,7 +783,7 @@ button { font: inherit; }
   .work-platforms figcaption { color: #4a4439; text-shadow: none; }
 }
 
-/* Projects: title and copy only, centered within each viewport. */
+/* Projects: title and copy only on a full-width warm background. */
 #projects .project {
   position: relative;
   display: flex;
@@ -802,18 +802,10 @@ button { font: inherit; }
 }
 
 #projects .project:hover { box-shadow: none; transform: none; }
+#projects .project::before,
 #projects .project::after,
 #projects .project-content::before,
 #projects .project-reading-layer::before { display: none; }
-
-#projects .project::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  display: block;
-  pointer-events: none;
-  background: linear-gradient(115deg, rgba(255,252,240,.5), transparent 48%, rgba(150,118,68,.045));
-}
 
 #projects .project-content,
 #projects .project-reading-layer {
