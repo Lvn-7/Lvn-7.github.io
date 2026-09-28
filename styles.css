@@ -827,8 +827,9 @@ button { font: inherit; }
   margin: 0;
   color: #111;
   font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(42px, 4.6vw, 68px);
-  line-height: 1.06;
+  font-size: clamp(30px, 3vw, 44px);
+  line-height: 1.18;
+  text-align: center;
   text-shadow: none;
 }
 
@@ -855,7 +856,7 @@ button { font: inherit; }
     padding: 88px 0 56px;
   }
   #projects .project h3,
-  #projects .project-reading-layer h3 { font-size: 34px; }
+  #projects .project-reading-layer h3 { font-size: 28px; }
   #projects .project-detail-list li,
   #projects .project-reading-layer .project-detail-list li { font-size: 12.5px; }
 }
